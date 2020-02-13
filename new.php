@@ -120,7 +120,7 @@ function veriflogin($otp, $token)
 	}
 function claim($token)
 	{
-	$data = '{"promo_code":"GOFOODBOBA07"}';
+	$data = '{"promo_code":"GOFOOD021120A"}';
 	$claim = request("/go-promotions/v1/promotions/enrollments", $token, $data);
 	if ($claim['success'] == 1)
 		{
@@ -133,7 +133,7 @@ function claim($token)
 	}
 
 echo "AUTO REGISTER, KLAIM VOUCHER, GOPAY SENDER V3\n";
-print "Thanks to : Muhammad Ikhsan, Muhammad Jumadi\n\n";
+print "Thanks to : Muhammad Ikhsan, Muhammad Jumadi, Muhammad Irsad\n\n";
 echo "[+] Masukan 62 untuk ID dan 1 untuk US\n";
 echo "[+] Nomor: ";
 $nope = trim(fgets(STDIN));
@@ -153,7 +153,7 @@ if ($register == false)
 		}
 	  else
 		{
-		echo "[+] Mencoba klaim GOFOODBOBA07\n";
+		echo "[+] Mencoba klaim GOFOOD021120A\n";
 		$claim = claim($verif);
 		if ($claim == false)
 			{
