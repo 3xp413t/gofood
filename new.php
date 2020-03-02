@@ -120,7 +120,7 @@ function veriflogin($otp, $token)
 	}
 function claim($token)
 	{
-	$data = '{"promo_code":"GOFOOD021120A"}';
+	$data = '{"promo_code":"GOFOOD022620A"}';
 	$claim = request("/go-promotions/v1/promotions/enrollments", $token, $data);
 	if ($claim['success'] == 1)
 		{
@@ -153,7 +153,7 @@ if ($register == false)
 		}
 	  else
 		{
-		echo "[+] Mencoba klaim GOFOOD021120A\n";
+		echo "[+] Mencoba klaim GOFOOD022620A\n";
 		$claim = claim($verif);
 		if ($claim == false)
 			{
